@@ -3,12 +3,17 @@ using UnityEngine;
 public class Moneda : MonoBehaviour, IInteractivo
 {
     [SerializeField] ItemData scriptableDatos;
+    AudioSource au;
 
+    void Start()
+    {
+        au=GameObject.FindFirstObjectByType<AudioSource>();
+    }
     public void Interact()
     {
         Debug.Log("Recogiste Item: "+scriptableDatos.nombreItem);
-        //Destroy(gameObject);
-        scriptableDatos.valor+=10;
-        Debug.Log("Este objeto vale:"+ scriptableDatos.valor);
+        au.PlayOneShot(scriptableDatos.sonidoItem);
+        Instantiate(scriptableDatos.prefabItem,transform.position,Quaternion.identity);
+        Destroy(gameObject);
     }
 }

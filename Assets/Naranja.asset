@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377f188d6182a504aba484c72bc441e7, type: 3}
   m_Name: Naranja
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  nombreItem: 
-  valor: 0
-  sonidoItem: {fileID: 0}
-  prefabItem: {fileID: 0}
+  nombreItem: Naranja
+  valor: 30
+  sonidoItem: {fileID: 8300000, guid: be03613a9e62e044384cb49fb2667dea, type: 3}
+  prefabItem: {fileID: 2622493845351294035, guid: a2801298f8316974493814b497a3affc, type: 3}
