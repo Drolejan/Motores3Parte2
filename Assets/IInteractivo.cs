@@ -1,7 +1,5 @@
 public interface IInteractivo 
 {
-   void Interact()
-    {
-        
-    }
+   void Interact();    
+   
 }

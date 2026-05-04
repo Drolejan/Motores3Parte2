@@ -5,10 +5,9 @@ public class Interactor : MonoBehaviour
     IInteractivo objectoDet;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<IInteractivo>() != null)
+        if (collision.gameObject.TryGetComponent<IInteractivo>(out objectoDet))
         {
             Debug.Log("Es Interactivo");
-            objectoDet=collision.gameObject.GetComponent<IInteractivo>();
             objectoDet.Interact();
         }
         else

@@ -7,4 +7,5 @@ public class ItemData : ScriptableObject
     public int valor;
     public AudioClip sonidoItem;
     public GameObject prefabItem;
+    public ItemType tipo;
 }
