@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);//Previene que exista mas de 1 gamemanager
             return;
         }
 
