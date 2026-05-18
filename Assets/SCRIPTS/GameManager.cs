@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+        
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);//Previene que exista mas de 1 gamemanager
