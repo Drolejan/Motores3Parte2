@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2567464863517971444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6526007127127123350}
+        m_TargetAssemblyTypeName: venderItem, Assembly-CSharp
+        m_MethodName: vender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1058015288872738464
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +144,7 @@ GameObject:
   - component: {fileID: 6021942097424636928}
   - component: {fileID: 7943163512757624408}
   - component: {fileID: 1184491931163127920}
+  - component: {fileID: 6526007127127123350}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -259,6 +272,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6526007127127123350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058015288872738464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1347a234495343f448234706f54e69e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::venderItem
 --- !u!1 &8053680731993473867
 GameObject:
   m_ObjectHideFlags: 0
