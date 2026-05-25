@@ -37,3 +37,41 @@ public class inventarioUI : MonoBehaviour
 
     
 }
+
+/*
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class inventarioUI : MonoBehaviour
+{
+    public GameObject datosItemPrefab;
+    public Transform listaInventario;
+
+    private void Start()
+    {
+        GameManager.Instance.OnInventoryChanged += RefreshInventory;
+        SceneManager.activeSceneChanged += CambioEscena;
+
+        RefreshInventory();
+    }
+
+    private void RefreshInventory()
+    {
+        foreach (Transform child in listaInventario)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (ItemData item in GameManager.Instance.Inventario)
+        {
+            GameObject nuevoSlot = Instantiate(datosItemPrefab, listaInventario);
+            nuevoSlot.GetComponent<SlotInventarioUI>().Configurar(item);
+        }
+    }
+
+    private void CambioEscena(Scene actual, Scene siguiente)
+    {
+        RefreshInventory();
+    }
+}
+*/

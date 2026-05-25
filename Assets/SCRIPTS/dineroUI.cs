@@ -16,3 +16,4 @@ public class dineroUI : MonoBehaviour
         dinero.text= "Gold: "+ valor;
     }
 }
+
