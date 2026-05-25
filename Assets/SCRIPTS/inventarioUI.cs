@@ -9,7 +9,7 @@ public class inventarioUI : MonoBehaviour
     public Transform listaInventario;
     void Start()
     {
-        GameManager.Instance.OnItemAdded+=itemsUpdate;
+        GameManager.Instance.OnInventoryChanged+=refreshInventory;
         SceneManager.activeSceneChanged+=cambioEscena;
         refreshInventory();
     }
@@ -20,13 +20,15 @@ public class inventarioUI : MonoBehaviour
     }
     void refreshInventory()
     {
-        listaInventario=GameObject.FindAnyObjectByType<GridLayoutGroup>().GetComponent<Transform>();
-        listaInventario.transform.parent.gameObject.SetActive(false);
-
-        foreach(ItemData i in GameManager.Instance.Inventario)
+         foreach (Transform child in listaInventario)
         {
-            GameObject esteItem=Instantiate(datosItemPrefab,listaInventario);
-            esteItem.GetComponent<TextMeshProUGUI>().text=i.name;
+            Destroy(child.gameObject);
+        }
+
+        foreach (ItemData item in GameManager.Instance.Inventario)
+        {
+            GameObject nuevoSlot = Instantiate(datosItemPrefab, listaInventario);
+            nuevoSlot.GetComponent<SlotInventarioUI>().Configurar(item);
         }
     }
     void cambioEscena(Scene actual,Scene siguente)
@@ -38,40 +40,3 @@ public class inventarioUI : MonoBehaviour
     
 }
 
-/*
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class inventarioUI : MonoBehaviour
-{
-    public GameObject datosItemPrefab;
-    public Transform listaInventario;
-
-    private void Start()
-    {
-        GameManager.Instance.OnInventoryChanged += RefreshInventory;
-        SceneManager.activeSceneChanged += CambioEscena;
-
-        RefreshInventory();
-    }
-
-    private void RefreshInventory()
-    {
-        foreach (Transform child in listaInventario)
-        {
-            Destroy(child.gameObject);
-        }
-
-        foreach (ItemData item in GameManager.Instance.Inventario)
-        {
-            GameObject nuevoSlot = Instantiate(datosItemPrefab, listaInventario);
-            nuevoSlot.GetComponent<SlotInventarioUI>().Configurar(item);
-        }
-    }
-
-    private void CambioEscena(Scene actual, Scene siguiente)
-    {
-        RefreshInventory();
-    }
-}
-*/
