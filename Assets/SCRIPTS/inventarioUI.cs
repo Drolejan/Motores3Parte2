@@ -13,11 +13,7 @@ public class inventarioUI : MonoBehaviour
         SceneManager.activeSceneChanged+=cambioEscena;
         refreshInventory();
     }
-    void itemsUpdate(ItemData nuevoItem)
-    {
-        GameObject esteItem=Instantiate(datosItemPrefab,listaInventario);
-        esteItem.GetComponent<TextMeshProUGUI>().text=nuevoItem.name;
-    }
+    
     void refreshInventory()
     {
          foreach (Transform child in listaInventario)
@@ -34,7 +30,7 @@ public class inventarioUI : MonoBehaviour
     void cambioEscena(Scene actual,Scene siguente)
     {
         Debug.Log("Cambiamos de escena "+actual.name+" a escena "+siguente.name);
-        refreshInventory();
+        //refreshInventory();
     }
 
     
