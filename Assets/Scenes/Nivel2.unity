@@ -460,6 +460,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267265568}
   m_CullTransparentMesh: 1
+--- !u!1 &303530534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303530536}
+  - component: {fileID: 303530535}
+  m_Layer: 0
+  m_Name: INVENTARIO MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &303530535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303530534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7012d13248cb545468f6ced506688b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::inventarioUI
+  datosItemPrefab: {fileID: 1058015288872738464, guid: e0b8dc82389341a4692d0809251bac26, type: 3}
+  listaInventario: {fileID: 726892393}
+--- !u!4 &303530536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303530534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.27462, y: 2.13209, z: 5.80326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505702789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,7 +2743,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1925225307}
   - component: {fileID: 1925225306}
-  - component: {fileID: 1925225308}
   m_Layer: 0
   m_Name: GAMEMANAGER
   m_TagString: Untagged
@@ -2734,20 +2779,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1925225308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925225305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7012d13248cb545468f6ced506688b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::inventarioUI
-  datosItemPrefab: {fileID: 1058015288872738464, guid: e0b8dc82389341a4692d0809251bac26, type: 3}
-  listaInventario: {fileID: 726892393}
 --- !u!1 &1958620797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,3 +4342,4 @@ SceneRoots:
   - {fileID: 1796523043}
   - {fileID: 1925225307}
   - {fileID: 1958620802}
+  - {fileID: 303530536}
