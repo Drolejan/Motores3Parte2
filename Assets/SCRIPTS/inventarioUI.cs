@@ -13,7 +13,13 @@ public class inventarioUI : MonoBehaviour
         SceneManager.activeSceneChanged+=cambioEscena;
         refreshInventory();
     }
-    
+
+    void OnDestroy()
+    {
+        //Me desuscribo del evento para prevenir errores al cambiar de escena
+        GameManager.Instance.OnInventoryChanged-=refreshInventory;
+    }
+
     void refreshInventory()
     {
          foreach (Transform child in listaInventario)
