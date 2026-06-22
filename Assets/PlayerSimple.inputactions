@@ -9,7 +9,7 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "16ba0756-3fd9-433a-af30-09a267c8419e",
+                    "id": "2f548cb0-c646-4566-9476-15b8fd16d0cf",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -18,17 +18,26 @@
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "07bbb86b-96f5-4cd0-8eda-53940c3d2c6f",
-                    "expectedControlType": "Vector2",
+                    "id": "42b927c6-2238-47cd-a732-e9d1e2837f83",
+                    "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "85daa927-89b5-43b9-aa6d-8387d7431e32",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "24c9a924-58e1-4eea-ace0-9de73f5014a6",
+                    "id": "0c751725-a543-475b-94a8-e45c56356074",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
@@ -39,7 +48,7 @@
                 },
                 {
                     "name": "WASD",
-                    "id": "e56ddedc-ffee-4bfe-b486-8b05ed50c720",
+                    "id": "ee56dc2c-50a4-497f-850a-2e3a2dff505e",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -50,7 +59,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "7ac15a14-70bc-491d-8ccd-7e995b6a43f0",
+                    "id": "8aae8cdf-299f-4bd6-b6ca-af994a61f7ea",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -61,7 +70,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "673647c9-b12c-4b99-b1ef-af0ee22b20f8",
+                    "id": "31c3954b-ccbc-42e2-82ba-26fc03ac145b",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -72,7 +81,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "0b8d0659-b5ef-468c-ae5e-e03109f5063e",
+                    "id": "157ea12e-397d-4769-b3ef-e59bfca385af",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -83,7 +92,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "8cc9fbae-9c8b-464d-a56f-778ccc19d351",
+                    "id": "d3f118ca-c925-4a6d-a65c-2dc127742826",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -91,6 +100,72 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "Flechas",
+                    "id": "31604c5a-9cb3-45f7-ad42-cfb569648570",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "0c766a0e-8503-4139-85fe-c486efc6598a",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "440f5d42-9486-4caf-8c67-3ade74f74787",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "948fa37c-cd1b-4e18-8fbd-f8b85409ded4",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "13e5ce80-4ae1-48ec-9ed9-a87953596423",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "adcbe88d-b5a8-4c14-9937-f29463abfecf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

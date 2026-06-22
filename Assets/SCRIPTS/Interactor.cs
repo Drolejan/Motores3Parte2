@@ -3,7 +3,7 @@ using UnityEngine;
 public class Interactor : MonoBehaviour
 {
     IInteractivo objectoDet;
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.TryGetComponent<IInteractivo>(out objectoDet))
         {
