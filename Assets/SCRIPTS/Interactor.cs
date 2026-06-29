@@ -12,7 +12,7 @@ public class Interactor : MonoBehaviour
         }
         else
         {
-            Debug.Log("No es interactivo");
+            //Debug.Log("No es interactivo");
         }
     }
 
