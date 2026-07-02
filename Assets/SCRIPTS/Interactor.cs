@@ -16,4 +16,33 @@ public class Interactor : MonoBehaviour
         }
     }
 
+    /*
+    private void OnCollisionEnter(Collision other)
+{
+    if(other.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+    {
+        objetoDetectado = interactivo;
+    }
+
+    private void OnCollisionExit(Collision other)
+{
+    if(other.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+    {
+        if(interactivo == objetoDetectado)
+            objetoDetectado = null;
+    }
+}
+
+public void OnInteract(InputValue value)
+{
+    if(!value.isPressed)
+        return;
+
+    if(!PlayerStateMachine.Instance.CanInteract())
+        return;
+
+    objetoDetectado?.Interact();
+}
+    */
+
 }
