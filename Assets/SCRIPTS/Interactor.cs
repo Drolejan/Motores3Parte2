@@ -1,48 +1,43 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
-    IInteractivo objectoDet;
+    IInteractivo objetoDet;
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.TryGetComponent<IInteractivo>(out objectoDet))
+        if (collision.gameObject.TryGetComponent<IInteractivo>(out objetoDet))
         {
             Debug.Log("Es Interactivo");
-            objectoDet.Interact();
+            objetoDet.Interact();
         }
-        else
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
         {
-            //Debug.Log("No es interactivo");
+        objetoDet = interactivo;
         }
     }
-
-    /*
-    private void OnCollisionEnter(Collision other)
-{
-    if(other.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+    void OnCollisionExit(Collision other)
     {
-        objetoDetectado = interactivo;
+        if(other.gameObject.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+        {
+        objetoDet = null;
+        }
     }
-
-    private void OnCollisionExit(Collision other)
-{
-    if(other.TryGetComponent<IInteractivo>(out IInteractivo interactivo))
+    public void OnInteract(InputValue value)
     {
-        if(interactivo == objetoDetectado)
-            objetoDetectado = null;
-    }
-}
-
-public void OnInteract(InputValue value)
-{
     if(!value.isPressed)
         return;
-
     if(!PlayerStateMachine.Instance.CanInteract())
         return;
-
-    objetoDetectado?.Interact();
+    objetoDet?.Interact();
+    }
 }
-    */
 
-}
+
+
+
+
+
