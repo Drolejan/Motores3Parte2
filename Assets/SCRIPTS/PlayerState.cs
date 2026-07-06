@@ -1,5 +1,6 @@
 public enum PlayerState
 {
     Gameplay,
-    InventoryOpen
+    InventoryOpen,
+    Talking
 }

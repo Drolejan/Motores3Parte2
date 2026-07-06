@@ -4,12 +4,14 @@ using UnityEngine.InputSystem;
 public class PlayerInventoryInput : MonoBehaviour
 {
     [SerializeField] private GameObject panelInventario;
+    bool isOpen;
 
     public void OnInventory(InputValue value)
     {
         if (!value.isPressed) return;
+        if(!PlayerStateMachine.Instance.CanInteract()&&!isOpen) return;
 
-        bool isOpen = !panelInventario.activeSelf;
+        isOpen = !panelInventario.activeSelf;
         panelInventario.SetActive(isOpen);
 
         if (isOpen)
