@@ -17,3 +17,4 @@ MonoBehaviour:
   sonidoItem: {fileID: 8300000, guid: be03613a9e62e044384cb49fb2667dea, type: 3}
   prefabItem: {fileID: 2622493845351294035, guid: a2801298f8316974493814b497a3affc, type: 3}
   tipo: 3
+  icono: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

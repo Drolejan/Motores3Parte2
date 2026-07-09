@@ -21,7 +21,7 @@ public class ItemDataEditor : Editor
         GUILayout.Label("Información General", EditorStyles.boldLabel);
 
         item.nombreItem =
-            EditorGUILayout.TextField("Nombre", item.nombreItem);
+            EditorGUILayout.TextField("Nombre del item", item.nombreItem);
 
         GUILayout.Space(10);
 
@@ -45,15 +45,20 @@ public class ItemDataEditor : Editor
             item.valor = 999;
         }
 
+        if (GUILayout.Button("Valor Random"))
+        {
+            item.valor = Random.Range(1,999);
+        }
+
         GUILayout.EndHorizontal();
 
         GUILayout.Space(10);
 
-        GUILayout.Label("Recursos", EditorStyles.boldLabel);
+        GUILayout.Label("Recursos", EditorStyles.whiteLabel);
 
         item.prefabItem =
             (GameObject)EditorGUILayout.ObjectField(
-                "Prefab",
+                "Efecto Pickup Prefab",
                 item.prefabItem,
                 typeof(GameObject),
                 false
@@ -61,7 +66,7 @@ public class ItemDataEditor : Editor
 
         item.sonidoItem =
             (AudioClip)EditorGUILayout.ObjectField(
-                "Sonido",
+                "Sonido Pickup",
                 item.sonidoItem,
                 typeof(AudioClip),
                 false
@@ -72,9 +77,9 @@ public class ItemDataEditor : Editor
         if (GUILayout.Button("Imprimir Datos"))
         {
             Debug.Log(
-                "Item: " + item.nombreItem +
-                " | Tipo: " + item.tipo +
-                " | Valor: " + item.valor
+                "Nombre del Item: " + item.nombreItem +
+                " | Tipo de item: " + item.tipo +
+                " | Valor de venta: " + item.valor
             );
         }
 

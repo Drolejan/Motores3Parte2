@@ -8,4 +8,5 @@ public class ItemData : ScriptableObject
     public AudioClip sonidoItem;
     public GameObject prefabItem;
     public ItemType tipo;
+    public Sprite icono;
 }
