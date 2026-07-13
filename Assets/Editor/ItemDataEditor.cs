@@ -87,5 +87,20 @@ public class ItemDataEditor : Editor
         {
             EditorUtility.SetDirty(item);
         }
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("Rareza Item", EditorStyles.whiteLabel);
+        
+        /*
+        item.infoItem =
+            (ItemInspector)EditorGUILayout.(
+                "Efecto Pickup Prefab",
+                item.infoItem,
+                typeof(ItemInspector),
+                false
+            );
+        */
+        
     }
 }
