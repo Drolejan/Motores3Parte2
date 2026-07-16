@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ItemData))]
+//[CustomEditor(typeof(ItemData))]
 public class ItemDataEditor : Editor
 {
     public override void OnInspectorGUI()
