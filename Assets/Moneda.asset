@@ -18,6 +18,6 @@ MonoBehaviour:
   prefabItem: {fileID: 2622493845351294035, guid: 31de4db98e050154c81c08b5750af2b5, type: 3}
   tipo: 0
   infoItem:
-    icono: {fileID: 0}
+    icono: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     rareza: 0
     colorRareza: {r: 1, g: 1, b: 1, a: 1}

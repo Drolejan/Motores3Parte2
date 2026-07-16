@@ -8,7 +8,7 @@ public class ItemDataEditor_Hibrido : Editor
 
     private void OnEnable()
     {
-        visualProperty = serializedObject.FindProperty("visual");
+        visualProperty = serializedObject.FindProperty("infoItem");
     }
 
     public override void OnInspectorGUI()
@@ -45,10 +45,12 @@ public class ItemDataEditor_Hibrido : Editor
             item.nombreItem
         );
 
+        /*
         item.descripcion = EditorGUILayout.TextArea(
             item.descripcion,
             GUILayout.MinHeight(50)
         );
+        */
 
         GUILayout.Space(10);
 
@@ -147,8 +149,8 @@ public class ItemDataEditor_Hibrido : Editor
 
         if (GUILayout.Button("Imprimir Datos"))
         {
-            string rareza = item.visual != null
-                ? item.visual.rareza.ToString()
+            string rareza = item.infoItem != null
+                ? item.infoItem.rareza.ToString()
                 : "Sin visual";
 
             Debug.Log(

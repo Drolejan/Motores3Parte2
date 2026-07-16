@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(ItemVisual))]
+[CustomPropertyDrawer(typeof(ItemInspector))]
 public class ItemVisualDrawer : PropertyDrawer
 {
     public override void OnGUI(
