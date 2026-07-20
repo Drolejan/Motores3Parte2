@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ItemData))]
+//[CustomEditor(typeof(ItemData))]
 public class ItemDataEditor_Hibrido : Editor
 {
     private SerializedProperty visualProperty;
@@ -44,13 +44,6 @@ public class ItemDataEditor_Hibrido : Editor
             "Nombre",
             item.nombreItem
         );
-
-        /*
-        item.descripcion = EditorGUILayout.TextArea(
-            item.descripcion,
-            GUILayout.MinHeight(50)
-        );
-        */
 
         GUILayout.Space(10);
 

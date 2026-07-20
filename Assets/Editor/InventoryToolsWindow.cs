@@ -42,9 +42,7 @@ public class InventoryToolsWindow : EditorWindow
             nuevoItem.tipo = tipo;
             nuevoItem.valor = valor;
 
-            AssetDatabase.CreateAsset(
-                nuevoItem,
-                $"Assets/Items/{nombre}.asset");
+            AssetDatabase.CreateAsset(nuevoItem,$"Assets/Scriptables/{nombre}.asset");
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
@@ -52,7 +50,7 @@ public class InventoryToolsWindow : EditorWindow
             Selection.activeObject = nuevoItem;
 
             nombre = "";
-            tipo = ItemType.Money;
+            tipo = ItemType.Moneda;
             valor = 100;
         }
     }

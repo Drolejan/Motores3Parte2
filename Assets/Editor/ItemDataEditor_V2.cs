@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-//[CustomEditor(typeof(ItemData))]
+[CustomEditor(typeof(ItemData))]
 public class ItemDataEditor_V2 : Editor
 {
     private SerializedProperty nombreItem;
@@ -9,6 +9,7 @@ public class ItemDataEditor_V2 : Editor
     private SerializedProperty valor;
     private SerializedProperty prefabItem;
     private SerializedProperty sonidoItem;
+    private SerializedProperty visualProperty;
 
     private void OnEnable()
     {
@@ -17,6 +18,7 @@ public class ItemDataEditor_V2 : Editor
         valor = serializedObject.FindProperty("valor");
         prefabItem = serializedObject.FindProperty("prefabItem");
         sonidoItem = serializedObject.FindProperty("sonidoItem");
+        visualProperty = serializedObject.FindProperty("infoItem");
     }
 
     public override void OnInspectorGUI()
@@ -87,6 +89,10 @@ public class ItemDataEditor_V2 : Editor
                 $"Valor: {valor.intValue}"
             );
         }
+
+        GUILayout.Space(10);
+        GUILayout.Label("Configuración Visual",EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(visualProperty,new GUIContent("Visual"),true);
 
         // Aplica todos los cambios realizados
         serializedObject.ApplyModifiedProperties();
